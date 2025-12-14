@@ -10,9 +10,9 @@ const app = express();
 const PORT = 3000;
 app.use(express.json());
 
-//app.get("/", (req, res) => {
-  //res.send("Server is running");
-//});
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 
 app.use("/api/todos", todoRoutes);
 
