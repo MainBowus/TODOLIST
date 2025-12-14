@@ -46,3 +46,18 @@ router.patch("/:id", async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 });
+// Delete a todo
+router.delete("/:id", async (req, res) => {
+    try {
+        const todo = await Todo.findByIdAndDelete(req.params.id);
+        if (!todo) {
+            return res.status(404).json({ message: "Todo not found" });
+        }
+        res.json({ message: "Todo deleted" });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+export default router;
+
