@@ -13,7 +13,7 @@ const Header = () => (
             </h1>
             <div className="flex items-center space-x-3">
                 <a 
-                    href="/app" 
+                    href="/login" 
                     className="px-4 py-2 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-100 transition duration-150"
                 >
                     Sign In
